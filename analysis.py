@@ -89,14 +89,6 @@ def show(dt_array, frame):
         print ("\n\n\nFRAME:\n")
         print(frame)
 
-
-
-#show(dt_array) # show the raw data
-#estimations(dt_array) # perform some basic analysis do the dataset and save it to "summary-report.txt" file
-#histograms(dt_array) # perform the histogram of the raw data 
-#scatter_plots(dt_array)  # perform the scatter plots of the raw data 
-#pieChart(frame)
-
   
 #------------------------------------------------------------------------------
 # 2 . Basis estimations
