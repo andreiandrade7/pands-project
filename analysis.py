@@ -33,12 +33,33 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+import requests
+
 
 #                                                          0.2) Upload data set 
 #------------------------------------------------------------------------------
- 
 
-frame = pd.read_csv('iris.data', sep=',') # read the info on the file and convert it into a panda dataframe 
+#The raw data import is upload either from 1) the current directory-cwd-if the file is available or 2) from the URL if the file is NOT available on the cwd
+
+if os.path.exists('iris.data'): # check if "iris.data" is available to upload from the current directory
+
+        frame = pd.read_csv('iris.data', sep=',') # read the file info and convert it into a panda dataframe 
+        print("\n\n\nFile imported successfully from the current directory\n\n\n")
+
+else:
+
+        url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+        response = requests.get(url) # library responsable for download info from an URL
+
+        with open('iris.data', 'wb') as f: # opens the file "iris.data" from the URL and write it in binary mode
+               f.write(response.content)
+        frame = pd.read_csv('iris.data', sep=',') # read the info on the file and convert it into a panda dataframe 
+
+        print("\n\n\nFile  successfully download from URL\n\n\n")
+        #print (frame)
+
+
 frame.columns = ["sl", "sw", "pl", "pw", "class"] # atributes an individual id to each column, being (from first to last):sepal lenght, sepal width, petal length, petal width and class
 #print(frame)
 
