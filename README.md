@@ -2,20 +2,25 @@
 Project
 
 #------------------------------------------------------------------------------
-#   1 . Upload the data - DONE
-#   2.  "Basic estimations" - max, min, avg, stde, median
-#   3.  Export "Basic estimations" into a .txt file
-#   4.  Histrograms of 4 variables
-#   5.  Export the 4 Histograms into a single image
+
+# The script is organized in the following way
+#   0. Initialization: 
+#               0.1) Upload libraries
+#               0.2) Upload data set
+
+#   2. Basis estimations - average , maximum, minimum, standart deviation,  correlation factor
+#   3. Histograms creations
+#   4. Scatter plot
+#   5. Extra :
+#         5.1)Pie chart
+
+#   X. Show the "Menu Options"
+
 
 
 NEXT: 
-#   6. Output a scatter plot per each pair of variables, example:
-#       - Sepal width vs Sepal length
-#       - Sepal width vs Petal width
-#       - Sepal width vs Petal length
+#   In the histograms present the data accordingly to the class
 
-# in each image distinguish already the 3 different of classes.
 # Use the same logic on the histograms 
 #------------------------------------------------------------------------------
 
