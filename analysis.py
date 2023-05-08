@@ -244,14 +244,15 @@ def scatter_plots(dt_array):
                 xpoints = sw[classes == c] # variable where is saved the "sepal widths" of all "c" class
                 ypoints = sl[classes == c] # variable where is saved the "sepal lenght" of all "c" class
                 plt.scatter(xpoints, ypoints, c=colors[i], label=str(c))  # scatter plot considering the color that is on "i" position and the label which is inside the "c" variable. This "c" is converted into a string to be inserted as legend of the data
-
+                plt.legend()
+                
                 # .... scatter with petal length
         plt.subplot(4,4,3) 
         for i, c in enumerate(classes_unique):
                 xpoints = pl[classes == c] # variable where is saved the "petal length" of all "c" class
                 ypoints = sl[classes == c] # variable where is saved the "sepal length" of all "c" class
                 plt.scatter(xpoints, ypoints, c=colors[i], label=str(c)) # scatter plot considering the color that is on "i" position and the label which is inside the "c" variable. This "c" is converted into a string to be inserted as legend of the data
-
+                plt.legend()
 
                 # .... scatter with petal width
         plt.subplot(4,4,4) 
@@ -259,7 +260,7 @@ def scatter_plots(dt_array):
                 xpoints = pw[classes == c] # variable where is saved the "petal width" of all "c" class
                 ypoints = sl[classes == c] # variable where is saved the "sepal length" of all "c" class
                 plt.scatter(xpoints, ypoints, c=colors[i], label=str(c)) # scatter plot considering the color that is on "i" position and the label which is inside the "c" variable. This "c" is converted into a string to be inserted as legend of the data
-
+                plt.legend()
 
 
         ###### ROW 2 --------------------------------------------------------- PLOT
@@ -277,6 +278,7 @@ def scatter_plots(dt_array):
                 xpoints = pl[classes == c] 
                 ypoints = sw[classes == c] 
                 plt.scatter(xpoints, ypoints, c=colors[i], label=str(c)) 
+                plt.legend()
 
                 # .... scatter with petal width
         plt.subplot(4,4,8) 
@@ -284,6 +286,7 @@ def scatter_plots(dt_array):
                 xpoints = pw[classes == c] 
                 ypoints = sw[classes == c] 
                 plt.scatter(xpoints, ypoints, c=colors[i], label=str(c)) 
+                plt.legend()
 
 
 ###### ROW 3 --------------------------------------------------------- PLOT
@@ -299,6 +302,7 @@ def scatter_plots(dt_array):
                 xpoints = pw[classes == c] 
                 ypoints = pl[classes == c] 
                 plt.scatter(xpoints, ypoints, c=colors[i], label=str(c)) 
+                plt.legend()
                 
                 
 ###### ROW 4 --------------------------------------------------------- PLOT
@@ -313,9 +317,9 @@ def scatter_plots(dt_array):
 
 ######  --------------------------------------------------------- PLOT
 
-        plt.legend()
+       
         plt.show() 
-
+       
 #------------------------------------------------------------------------------
 # 5 . Extra
 #------------------------------------------------------------------------------
